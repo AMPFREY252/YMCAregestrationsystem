@@ -1,0 +1,75 @@
+/**
+ * Responsive CSS - Mobile-first overrides
+ * ========================================
+ * Handles tablet and phone layouts.
+ */
+
+/* Mobile First Base */
+@media (max-width: 576px) {
+    .container { padding: 0 1rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+
+    /* Header */
+    .header-inner { flex-wrap: wrap; gap: 0.5rem; height: auto; padding: 0.5rem 0; }
+    .main-nav { position: fixed; top: 70px; left: 0; right: 0; background: var(--surface); box-shadow: var(--shadow); z-index: 100; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; border-bottom: 1px solid var(--border); }
+    .main-nav.open { max-height: 400px; }
+    .main-nav ul { flex-direction: column; gap: 0; padding: 0.5rem 1rem; }
+    .main-nav li { border-bottom: 1px solid var(--border); }
+    .main-nav a { padding: 0.75rem; display: block; }
+    .menu-toggle-mobile { display: block; }
+    .header-actions { gap: 0.4rem; }
+    .btn-cta { font-size: 0.8rem; padding: 0.5rem 0.8rem; }
+
+    /* Hero */
+    .hero { padding: 2rem 0; min-height: 400px; }
+    .hero-content { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-text h1 { font-size: 1.8rem; }
+    .hero-btns { flex-direction: column; }
+
+    /* Stats */
+    .stats-grid { grid-template-columns: 2fr 1fr; gap: 1rem; }
+    .stats .stat-value { font-size: 1.5rem; }
+
+    /* Form Grid */
+    .form-grid { grid-template-columns: 1fr; }
+
+    /* Registration */
+    .register-card { padding: 1rem; }
+    .wizard-body { padding: 0 1rem; }
+    .wizard-footer { padding: 1rem; flex-direction: column; }
+    .step-dots { font-size: 0.65rem; }
+    .review-grid { grid-template-columns: 1fr; }
+
+    /* Tables */
+    .table { font-size: 0.8rem; }
+    .table th, .table td { padding: 0.5rem; }
+    .actions-cell { flex-direction: column; gap: 0.2rem; }
+
+    /* Profile */
+    .profile-header { flex-direction: column; text-align: center; }
+    .profile-actions { margin-left: 0; width: 100%; }
+    .info-grid { grid-template-columns: 1fr; }
+
+    /* Settings */
+    .settings-card { padding: 1rem; }
+    .setting-row { flex-direction: column; text-align: center; gap: 0.5rem; }
+
+    /* Login */
+    .login-card { padding: 1.5rem; }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .charts-row { grid-template-columns: 1fr; }
+    .chart-container { height: 200px; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+}

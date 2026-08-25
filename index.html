@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YMCA Uganda - Student Registration & Management System</title>
+    <meta name="description" content="YMCA Uganda Student Registration and Management System - Empowering students through education and skills development.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/database/indexeddb.js"></script>
+    <script src="js/database/studentsRepository.js"></script>
+    <script src="js/database/programsRepository.js"></script>
+    <script src="js/database/departmentsRepository.js"></script>
+    <script src="js/database/usersRepository.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/seed.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/landing.js"></script>
+</head>
+<body class="landing-page">
+    <header class="site-header" id="landing-header">
+        <div class="container header-inner">
+            <div class="logo"><img src="assets/images/ymca-logo.jpg" alt="YMCA Uganda"><span>YMCA</span></div>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#whyymca">Why YMCA</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="register.html" class="btn btn-primary btn-cta">Register Now</a>
+                <a href="login.html" class="btn btn-outline btn-sm">Staff Login</a>
+                <button class="menu-toggle-mobile" id="menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Empowering Students Through Education and Skills Development</h1>
+                <p>YMCA Uganda offers quality educational programs that build practical skills, foster leadership, and create pathways to employment for young people and adults across Uganda.</p>
+                <div class="hero-btns">
+                    <a href="register.html" class="btn btn-primary btn-lg"><i class="fas fa-user-plus"></i> Register Now</a>
+                    <a href="#programs" class="btn btn-outline btn-lg"><i class="fas fa-book"></i> Explore Programs</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-badge"><i class="fas fa-graduation-cap"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid" id="stats-container">
+                <div class="stat-card"><div class="stat-value" id="stat-students">0</div><div class="stat-label">Registered Students</div></div>
+                <div class="stat-card"><div class="stat-value" id="stat-programs">0</div><div class="stat-label">Active Programs</div></div>
+                <div class="stat-card"><div class="stat-value" id="stat-depts">0</div><div class="stat-label">Departments</div></div>
+                <div class="stat-card"><div class="stat-value" id="stat-graduates">0</div><div class="stat-label">Graduates</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Academic Programs</h2>
+            <p class="section-subtitle">YMCA Uganda offers a wide range of programs designed to meet the needs of our communities.</p>
+            <div class="programs-grid" id="programs-container"></div>
+        </div>
+    </section>
+
+    <section class="whyymca" id="whyymca">
+        <div class="container">
+            <h2 class="section-title">Why Choose YMCA?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card"><i class="fas fa-star benefit-icon"></i><h3>Quality Education</h3><p>Accredited programs delivered by experienced instructors.</p></div>
+                <div class="benefit-card"><i class="fas fa-cogs benefit-icon"></i><h3>Practical Skills</h3><p>Hands-on learning that prepares you for the workforce.</p></div>
+                <div class="benefit-card"><i class="fas fa-briefcase benefit-icon"></i><h3>Professional Development</h3><p>Career guidance and internship placement support.</p></div>
+                                <div class="benefit-card"><i class="fas fa-heart benefit-icon"></i><h3>Community Impact</h3><p>Programs that serve and strengthen local communities.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About YMCA Uganda</h2>
+            <p>The Young Men's Christian Association of Uganda is a charitable organization committed to building a better Uganda through youth empowerment, education, and community development. Founded with a vision of inclusive growth, YMCA Uganda serves thousands of students each year across multiple programs.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Plot 123, YMCA Building, Kampala, Uganda</p>
+                    <p><i class="fas fa-phone"></i> +256 41 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@ymca.ug</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>YMCA Uganda</h4>
+                <p>Empowering Youth Through Education Since 1963</p>
+                <p>&copy; 2026 YMCA Uganda Student Registration System</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul><li><a href="register.html">Student Registration</a></li><li><a href="login.html">Staff Login</a></li><li><a href="#programs">Programs</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Programs</h4>
+                <ul><li><a href="#">Business & Entrepreneurship</a></li><li><a href="#">Health & Wellness</a></li><li><a href="#">Arts & Technology</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+            </div>
+        </div>
+    </footer>
