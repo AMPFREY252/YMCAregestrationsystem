@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - YMCA Uganda Student Management</title>
+    <meta name="description" content="YMCA Uganda Settings">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/database/indexeddb.js"></script>
+    <script src="js/database/studentsRepository.js"></script>
+    <script src="js/database/programsRepository.js"></script>
+    <script src="js/database/departmentsRepository.js"></script>
+    <script src="js/database/usersRepository.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/seed.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+</head>
+<body class="admin-page">
+    <div class="admin-wrapper">
+        <main class="admin-content">
+            <div class="page-header">
+                <h1><i class="fas fa-cog"></i> Settings</h1>
+            </div>
+
+            <div class="settings-grid">
+                <div class="settings-card">
+                    <h3><i class="fas fa-palette"></i> Appearance</h3>
+                    <div class="setting-row">
+                        <label>Dark Mode</label>
+                        <button class="btn btn-outline btn-sm" id="theme-toggle-btn"><i class="fas fa-moon"></i> Toggle Theme</button>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3><i class="fas fa-database"></i> Database Statistics</h3>
+                    <div id="db-stats" class="stats-grid">
+                        <div class="loading-state"><div class="spinner"></div><p>Loading...</p></div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3><i class="fas fa-download"></i> Data Export</h3>
+                    <div class="setting-row">
+                        <button class="btn btn-primary" id="btn-export-all"><i class="fas fa-download"></i> Export All Data</button>
+                        <button class="btn btn-outline" id="btn-import-data"><i class="fas fa-upload"></i> Import Data</button>
+                    </div>
+                    <div class="setting-row">
+                        <button class="btn btn-outline" id="btn-backup"><i class="fas fa-cloud-upload-alt"></i> Create Backup</button>
+                        <button class="btn btn-outline" id="btn-restore"><i class="fas fa-cloud-download-alt"></i> Restore Data</button>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3><i class="fas fa-eraser"></i> Demo Data</h3>
+                    <div class="setting-row">
+                        <button class="btn btn-warning" id="btn-seed-demo"><i class="fas fa-seedling"></i> Load Demo Data</button>
+                        <button class="btn btn-danger" id="btn-clear-data"><i class="fas fa-trash"></i> Clear All Data</button>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3><i class="fas fa-lock"></i> Security</h3>
+                    <p class="setting-desc">Authentication and authorization are handled client-side in this prototype. The PHP backend will provide secure server-side auth.</p>
+                    <div class="setting-row">
+                        <button class="btn btn-outline" id="btn-change-pin"><i class="fas fa-key"></i> Change Password</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

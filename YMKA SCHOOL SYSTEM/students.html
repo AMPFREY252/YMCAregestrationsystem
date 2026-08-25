@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - YMCA Uganda Student Management</title>
+    <meta name="description" content="YMCA Uganda Student Management">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/database/indexeddb.js"></script>
+    <script src="js/database/studentsRepository.js"></script>
+    <script src="js/database/programsRepository.js"></script>
+    <script src="js/database/departmentsRepository.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/seed.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/students.js"></script>
+</head>
+<body class="admin-page">
+    <div class="admin-wrapper">
+        <main class="admin-content">
+            <div class="page-header">
+                <h1><i class="fas fa-user-graduate"></i> Students</h1>
+                <div class="header-actions">
+                    <a href="register.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Register Student</a>
+                    <button class="btn btn-outline" id="export-csv"><i class="fas fa-file-csv"></i> CSV</button>
+                    <button class="btn btn-outline" id="export-json"><i class="fas fa-file-export"></i> JSON</button>
+                </div>
+            </div>
+            <div class="toolbar">
+                <input type="text" id="search-input" class="search-input" placeholder="Search by name, reg#, phone, email, or ID...">
+                <div class="filter-group">
+                    <select id="filter-program"><option value="">All Programs</option></select>
+                    <select id="filter-department"><option value="">All Departments</option></select>
+                    <select id="filter-gender"><option value="">All Genders</option><option value="male">Male</option><option value="female">Female</option><option value="other">Other</option></select>
+                    <select id="filter-status"><option value="">All Statuses</option><option value="active">Active</option><option value="pending">Pending</option><option value="completed">Completed</option><option value="suspended">Suspended</option></select>
+                    <select id="filter-session"><option value="">All Sessions</option><option value="2023/2024">2023/2024</option><option value="2024/2025">2024/2025</option></select>
+                    <select id="filter-intake"><option value="">All Intakes</option><option value="January 2024">January 2024</option><option value="September 2023">September 2023</option><option value="January 2025">January 2025</option></select>
+                    <button class="btn btn-outline btn-sm" id="apply-filters">Apply</button>
+                    <button class="btn btn-outline btn-sm" id="clear-filters">Clear</button>
+                </div>
+            </div>
+            <div id="students-table"></div>
+            <div id="pagination-container"></div>
+        </main>
+    </div>
+</body>
+</html>
